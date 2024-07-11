@@ -37,7 +37,7 @@ public class SearchSongStep {
         WebDriver driver = searchSongPage.getDriver();
         List<WebElement> playButtons = driver.findElements(searchSongPage.getBtnSelectSong());
         RandomClick.clickRandomElement(driver, playButtons);
-        Waits.waitForSeconds(2);
+        Waits.waitForSeconds(1);
         searchSongPage.getDriver().findElement(searchSongPage.getBtnPlaySong()).click();
         Waits.waitForSeconds(5);
     }
