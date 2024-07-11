@@ -1,16 +1,10 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.HomePage;
-import com.spotify.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
-import java.util.ArrayList;
-import java.util.Map;
-
-import static com.spotify.utils.CallData.extractTo;
-
-public class HomeSteps {
+public class HomeStep {
     @Page
     HomePage homePage;
 

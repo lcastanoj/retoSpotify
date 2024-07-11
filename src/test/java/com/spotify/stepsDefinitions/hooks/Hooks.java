@@ -1,6 +1,6 @@
 package com.spotify.stepsDefinitions.hooks;
 
-import com.spotify.steps.HomeSteps;
+import com.spotify.steps.HomeStep;
 import com.spotify.steps.LoginStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -33,7 +33,7 @@ public class Hooks {
     }
 
     @Steps
-    HomeSteps homeSteps;
+    HomeStep homeSteps;
 
     @Steps
     LoginStep loginStep;

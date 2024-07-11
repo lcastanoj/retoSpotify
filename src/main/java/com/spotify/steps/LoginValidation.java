@@ -13,6 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class LoginValidation {
     @Page
     HomePage homePage;
+
     @Step
     public void assertion() {
         ArrayList<Map<String, String>> data = CallData.extractTo();
