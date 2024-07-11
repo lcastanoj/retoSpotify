@@ -1,12 +1,16 @@
 package com.spotify.stepsDefinitions;
 
 import com.spotify.steps.SearchSongStep;
+import com.spotify.steps.SearchValidation;
 import io.cucumber.java.en.*;
 import net.thucydides.core.annotations.Steps;
 
 public class SearchSongStepDefinitions {
     @Steps
     SearchSongStep searchSongStep;
+
+    @Steps
+    SearchValidation searchValidation;
 
     @When("the user searches for the desired song")
     public void theUserSearchesForTheDesiredSong() {

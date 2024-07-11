@@ -1,0 +1,7 @@
+# Ignorar carpetas específicas
+.gradle/
+.idea/
+build/
+gradle/
+history/
+target/
