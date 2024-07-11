@@ -1,8 +1,14 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.HomePage;
+import com.spotify.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import static com.spotify.utils.CallData.extractTo;
 
 public class HomeSteps {
     @Page
@@ -10,19 +16,11 @@ public class HomeSteps {
 
     @Step("User opens Spotify url")
     public void openBrowser() {
-        homePage.openUrl("https://open.spotify.com/intl-es");
+        homePage.openUrl("https://open.spotify.com/");
     }
 
     @Step("the user clicks the login button")
     public void theUserClicksTheLoginButton(){
-        homePage.getDriver().findElement(homePage.getBtnMenu()).click();
-        homePage.getDriver().findElement(homePage.getBtnMenuLogin()).click();
-    }
-
-    @Step("the user enters the credentials")
-    public void theUserEntersTheCredentials(){
-        homePage.getDriver().findElement(homePage.getInputUsername()).sendKeys("laucasj13");
-        homePage.getDriver().findElement(homePage.getInputPassword()).sendKeys("Sali0313+");
         homePage.getDriver().findElement(homePage.getBtnLogin()).click();
     }
 }
