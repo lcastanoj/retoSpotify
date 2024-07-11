@@ -23,4 +23,9 @@ public class HomeSteps {
     public void theUserClicksTheLoginButton(){
         homePage.getDriver().findElement(homePage.getBtnLogin()).click();
     }
+
+    @Step("the user closes the cookies window")
+    public void theUserClosesTheCookiesWindow(){
+        homePage.getDriver().findElement(homePage.getBtnCookies()).click();
+    }
 }

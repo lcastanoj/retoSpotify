@@ -45,6 +45,7 @@ public class Hooks {
 
     @When("the user clicks the login button and enters credentials")
     public void theUserClicksTheLoginButtonAndEntersCredentials() {
+        homeSteps.theUserClosesTheCookiesWindow();
         homeSteps.theUserClicksTheLoginButton();
         loginStep.theUserEntersTheCredentials();
     }

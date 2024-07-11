@@ -16,4 +16,9 @@ public class HomePage extends PageObject {
     public WebElement getLblWelcome() {
         return lblWelcome;
     }
+
+    private final By btnCookies = By.xpath("//div[@id='onetrust-close-btn-container']/button[@aria-label='Close']");
+    public By getBtnCookies() {
+        return btnCookies;
+    }
 }
