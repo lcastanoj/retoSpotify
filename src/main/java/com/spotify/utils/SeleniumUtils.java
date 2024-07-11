@@ -10,17 +10,19 @@ import java.util.Random;
 public class SeleniumUtils {
     public static void clickRandomElement(WebDriver driver, List<WebElement> elements) {
         if (driver == null) {
-            throw new IllegalArgumentException("WebDriver no puede ser null");
+            throw new IllegalArgumentException("WebDriver cannot be null");
         }
 
         if (elements == null || elements.isEmpty()) {
-            System.out.println("No se encontraron elementos para hacer clic.");
+            System.out.println("No elements found to click.");
             return;
         }
 
         Random random = new Random();
         int randomIndex = random.nextInt(elements.size());
         WebElement randomElement = elements.get(randomIndex);
+
+        Excel.writeToExcel("src/main/resources/data/search.xlsx", randomElement.getText(),1,4);
 
         Actions actions = new Actions(driver);
         actions.moveToElement(randomElement).click().perform();

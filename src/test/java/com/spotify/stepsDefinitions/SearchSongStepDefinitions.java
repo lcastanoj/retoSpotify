@@ -25,6 +25,6 @@ public class SearchSongStepDefinitions {
 
     @Then("the selected song matches the searched song")
     public void theSelectedSongMatchesTheSearchedSong() {
-
+        searchValidation.assertion();
     }
 }

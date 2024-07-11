@@ -1,6 +1,7 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.SearchSongPage;
+import com.spotify.utils.Excel;
 import com.spotify.utils.SeleniumUtils;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
