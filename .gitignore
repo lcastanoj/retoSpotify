@@ -1,7 +1,32 @@
-# Ignorar carpetas específicas
+# Ignorar el directorio de Gradle
 .gradle/
+
+# Ignorar archivos de configuración de IDEs
 .idea/
-build/
+*.iml
+
+# Ignorar archivos de configuración específicos de Gradle
 gradle/
-history/
+
+# Ignorar archivos generados por Gradle
+build/
+*.gradle
+*.gradle.kts
+gradlew
+gradlew.bat
+
+# Ignorar el directorio de compilación
 target/
+
+# Ignorar archivos temporales y de historial
+history
+*.log
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ignorar el archivo .getattributes (generalmente no necesario en el repositorio)
+.getattributes
