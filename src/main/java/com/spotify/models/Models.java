@@ -1,7 +1,5 @@
 package com.spotify.models;
 
-import com.spotify.utils.CallData;
-
 import java.util.ArrayList;
 import java.util.Map;
 

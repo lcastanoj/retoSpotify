@@ -1,7 +1,7 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.HomePage;
-import com.spotify.utils.CallData;
+import com.spotify.utils.Excel;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
@@ -16,7 +16,7 @@ public class LoginValidation {
 
     @Step
     public void assertion() {
-        ArrayList<Map<String, String>> data = CallData.extractTo();
+        ArrayList<Map<String, String>> data = Excel.extractTo();
         String expectedText = data.get(0).get("validate1");
 
         String actualText = homePage.getLblWelcome().getText();

@@ -1,8 +1,7 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.SearchSongPage;
-import com.spotify.utils.RandomClick;
-import com.spotify.utils.Waits;
+import com.spotify.utils.SeleniumUtils;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.spotify.utils.CallData.extractTo;
+import static com.spotify.utils.Excel.extractTo;
 
 public class SearchSongStep {
     @Page
@@ -33,8 +32,8 @@ public class SearchSongStep {
     public void theUserPlaysTheSong() {
         WebDriver driver = searchSongPage.getDriver();
         List<WebElement> playButtons = driver.findElements(searchSongPage.getBtnSelectSong());
-        RandomClick.clickRandomElement(driver, playButtons);
+        SeleniumUtils.clickRandomElement(driver, playButtons);
         searchSongPage.getDriver().findElement(searchSongPage.getBtnPlaySong()).click();
-        Waits.waitForSeconds(2);
+        SeleniumUtils.waitForSeconds(2);
     }
 }

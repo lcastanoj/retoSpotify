@@ -7,7 +7,7 @@ import org.fluentlenium.core.annotation.Page;
 import java.util.ArrayList;
 import java.util.Map;
 
-import static com.spotify.utils.CallData.extractTo;
+import static com.spotify.utils.Excel.extractTo;
 
 public class LoginStep {
     @Page
