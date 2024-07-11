@@ -1,6 +1,5 @@
 package com.spotify.steps;
 
-import com.spotify.pageObjects.HomePage;
 import com.spotify.pageObjects.SearchSongPage;
 import com.spotify.utils.CallData;
 import net.thucydides.core.annotations.Step;

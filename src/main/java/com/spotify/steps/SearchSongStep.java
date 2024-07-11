@@ -1,7 +1,6 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.SearchSongPage;
-import com.spotify.utils.ExcelWriter;
 import com.spotify.utils.RandomClick;
 import com.spotify.utils.Waits;
 import net.thucydides.core.annotations.Step;
@@ -9,11 +8,9 @@ import org.fluentlenium.core.annotation.Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 
 import static com.spotify.utils.CallData.extractTo;
 
