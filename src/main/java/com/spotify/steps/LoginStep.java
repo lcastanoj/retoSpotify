@@ -1,6 +1,7 @@
 package com.spotify.steps;
 
 import com.spotify.pageObjects.LoginPage;
+import com.spotify.utils.SeleniumUtils;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
@@ -19,5 +20,6 @@ public class LoginStep {
         loginPage.getDriver().findElement(loginPage.getInputUsername()).sendKeys(data.get(0).get("username"));
         loginPage.getDriver().findElement(loginPage.getInputPassword()).sendKeys(data.get(0).get("password"));
         loginPage.getDriver().findElement(loginPage.getBtnSendLogin()).click();
+        //SeleniumUtils.waitForSeconds(10);
     }
 }
