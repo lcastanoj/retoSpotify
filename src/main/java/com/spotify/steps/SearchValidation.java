@@ -17,13 +17,6 @@ public class SearchValidation {
     @Step
     public void assertion() {
         ArrayList<Map<String, String>> data = Excel.extractTo();
-        String expectedText = data.get(0).get("songSelect");
-
-        String actualText = searchSongPage.getLblSong().getText();
-
-        assertEquals(expectedText, actualText);
-
-        System.out.println("Expected: " + expectedText);
-        System.out.println("Actual: " + actualText);
+        assertEquals(data.get(0).get("songSelect"), searchSongPage.getLblSong().getText());
     }
 }

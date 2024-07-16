@@ -1,12 +1,8 @@
-Feature: Spotify web
+Feature: Spotify search song
 
   Background:
     Given the user is on the Spotify page
     When the user clicks the login button and enters credentials
-
-  @Login
-  Scenario: Successful login
-    Then the user is logged in successfully
 
   @SearchSong
   Scenario: Song search

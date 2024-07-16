@@ -17,13 +17,6 @@ public class LoginValidation {
     @Step
     public void assertion() {
         ArrayList<Map<String, String>> data = Excel.extractTo();
-        String expectedText = data.get(0).get("validate1");
-
-        String actualText = homePage.getLblWelcome().getText();
-
-        assertEquals(expectedText, actualText);
-
-        System.out.println("Expected: " + expectedText);
-        System.out.println("Actual: " + actualText);
+        assertEquals(data.get(0).get("validate1"), homePage.getLblWelcome().getText());
     }
 }
